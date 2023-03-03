@@ -1,0 +1,70 @@
+@media screen and (max-width:480px){
+    
+    header{
+        display: flex;
+        justify-content: center;
+    }
+    #liens{
+        display: block;
+        font-size: 14px;
+    }
+    #logo a{
+        color: #FFFFFF;
+        font-weight: 900;
+        text-decoration: dashed;
+        font-size: 25px;
+    }
+
+    #accueil{
+        height: 300px;
+        background-size: 130%;
+        background-position: center;
+    }
+    #titre-texte strong{
+        font-size: 30px;
+    }
+    #titre-texte{
+        font-size: 20px;
+    }
+
+
+    #presentation{
+        display: grid;
+        justify-content: center;
+        padding: 60px 0;
+    }
+    #paulricard-index{
+        margin: 0 auto;
+        width: 75%;
+        margin-bottom: 30px;
+        background-repeat: no-repeat;
+        background-size: 191%;
+        background-position: 53% 57%;
+    }
+    #texte-index{
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 150%;
+        text-align: justify;
+    }
+
+
+
+    #bloc_recherche h2{
+        margin-bottom: 50px;
+    }
+    #label-input-recherche{
+        margin-bottom: 50px;
+    }
+    #label-input-recherche div{
+        display: block;
+        margin-bottom: 20px;
+    }
+    #bouton-recherche button{
+        width: 60%;
+        padding: 10px;
+    }
+}

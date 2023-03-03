@@ -1,0 +1,244 @@
+body{
+    width: 100%;
+    margin: 0 auto;
+    background: rgb(75, 0, 0);
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ----- HEADER ----- */
+
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: "Formula1";
+    height: 80px;
+    background-color: #000000;
+}
+header > nav > ul > li{
+    margin: 0 13px 0 13px;
+}
+#logo, #pages{
+    position: relative;
+}
+#logo{
+    margin-left: 13px;
+}
+#logo a{
+    color: #FFFFFF;
+    font-weight: 900;
+    text-decoration: dashed;
+    font-size: 30px;
+}
+#liens{
+    list-style: none;
+    display: inline-flex;
+    font-weight: bold;
+}
+#liens > li > a{
+    font-weight: 400;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: 0.4s;
+}
+#liens > li > a:hover{
+    color: #ED1D24;
+}
+
+section{
+    width: 100%;
+}
+
+/* ----- ACCUEIL ----- */
+
+#accueil{
+    font-family: "Formula1";
+    width: 100%;
+    font-size: 30px;
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: 83% 35%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+    box-shadow: 0 0 10px rgb(0 0 0);
+}
+#titre-texte strong{
+    font-size: 40px;
+}
+#titre-texte{
+    font-size: 25px;
+}
+
+/* ----- INDEX ----- */
+
+#presentation{
+    padding: 117px 0;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#paulricard-index{
+    width: 30%;
+    height: 200px;
+    border-radius: 20px;
+    background-image: url(../images/paul-ricard.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 10px rgb(0 0 0);
+}
+#texte-index{
+    width: 70%;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 150%;
+    padding-left: 40px;
+    line-height: 170%;
+    text-align: justify;
+}
+
+/* ----- CATALOGUE ----- */
+
+.blocs-circuits{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px 0;
+    width: 90%;
+}
+.circuit{
+    margin: 0 auto;
+    height: 400px;
+    width: 300px;
+    border-radius: 20px;
+    background-color: #000000;
+    margin-bottom: 40px;
+    box-shadow: 0 0 10px rgb(0 0 0);
+}
+.photo-circuit{
+    height: 35%;
+    border-radius: 20px 20px 0 0;
+    background-image: url(../images/monaco.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.histoire-circuit{
+    display: grid;
+    align-items: center;
+    height: 65%;
+    background-color: rgba(219, 0, 0, 0.218);
+    border-radius: 0 0 20px 20px;
+}
+.nom-circuit{
+    font-size: 25px;
+    font-family: "Formula1";
+    text-align: center;
+}
+.date-long{
+    display: flex;
+    justify-content: space-evenly;
+}
+.lieu-circuit,
+.ouverture,
+.longueur,
+.capacite,
+.pilote-lap{
+    text-align: center;
+    font-size: 15px;
+}
+.titre-lap{
+    font-size: 20px;
+    text-align: center;
+    font-family: "Formula1";
+}
+#bouton-retour{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ----- RECHERCHE ----- */
+
+#bloc_recherche{
+    margin: 0 auto;
+    padding: 113px 0;
+    text-align: center;
+}
+#bloc_recherche h2{
+    font-family: "Formula1";
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+#bloc_recherche label{
+    font-weight: 600;
+}
+#bloc_recherche input{
+    border-radius: 10px;
+    border: none;
+    width: 300px;
+    height: 20px;
+}
+#bloc_recherche input[type="text"]{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding-left: 10px;
+}
+#label-input-recherche div{
+    padding: 0 5px;
+    display: inline-block;
+    margin-bottom: 60px;
+}
+#bouton-recherche input[type="submit"],
+#bouton-retour input[type="submit"]{
+    cursor: pointer;
+    width: 250px;
+    height: 31px;
+    background-color: #FFF;
+    color: #000;
+    font-family: "Formula1";
+    font-weight: 700;
+    border-radius: 20px;
+    border: none;
+    transition: 0.3s;
+}
+#bouton-recherche input[type="submit"]:hover,
+#bouton-retour input[type="submit"]:hover{
+    background-color: #ED1D24;
+    color: #FFF;
+}
+
+/* ----- FOOTER ----- */
+
+footer{
+    text-align: center;
+    font-family: "Formula1";
+    font-size: 13px;
+    line-height: 140%;
+    width: 100%;
+    background-color: #000000;
+    color: #FFF;
+    padding: 10px 0 10px 0;
+    box-shadow: 0 0 10px rgb(0 0 0);
+}
+#site-perso{
+    color: #FFFFFF;
+    font-weight: bolder;
+    text-decoration: none;
+    transition: 0.4s;
+}
+#site-perso:hover{
+    color: #ED1D24;
+}
+@font-face {
+    font-family: "Formula1";
+    src: url(https://www.formula1.com/etc/designs/fom-website/fonts/F1Regular/Formula1-Regular.ttf);
+}
