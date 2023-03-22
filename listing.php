@@ -35,7 +35,7 @@
 
         foreach ($resultat as $value){
             echo '<div class="circuit">';
-                echo '<div class="photo-circuit"style=background:url(images/upload/'.$value['circuit_photo'].');background-size:cover;background-repeat:no-repeat;background-position:50%;></div>';
+                echo '<div class="photo-circuit" style=background:url(images/upload/'.$value['circuit_photo'].');background-size:cover;background-repeat:no-repeat;background-position:50%;></div>';
                 echo '<div class="histoire-circuit">';
                     echo '<div class="nom-circuit">'.$value['circuit_nom'].'</div>';
                     echo '<div class="lieu-circuit">'.$value['circuit_ville'].', '.$value['circuit_pays'].'</div>';
