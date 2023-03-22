@@ -30,16 +30,12 @@
                     pilote a été le plus rapide !
                 </h2>
                 <div id="label-input-recherche">
-                    <div>
-                        <label for="recherche">TAPEZ LE NOM :</label>
-                    </div>
-                    <div>
-                        <input type="text" name="recherche" id="recherche" placeholder="Schumacher">
-                    </div>
+                    <div><label for="recherche">TAPEZ LE NOM :</label></div>
+                    <div><input type="text" name="recherche" id="recherche" placeholder="Schumacher"></div>
                 </div>
                 <?php
                     if (isset($_GET['erreurnom'])) {
-                        echo '<p>Merci de saisir un nom.</p>';
+                        echo '<p><strong><I>Vous devez saisir un nom pour effectuer une recherche.</I></strong></p>';
                     }
                 ?>
                 <div id="bouton-recherche">

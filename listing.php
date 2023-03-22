@@ -20,76 +20,36 @@
         <div id="accueil">
             <div id="titre-texte">
                 <strong>CATALOGUE</strong><br>
-                Voici une liste de circuits qui ont marqué les sports mécaniques !.
+                Voici une liste de circuits qui ont marqué l'histoire des sports mécaniques !
             </div>
         </div>
 
         <div class="blocs-circuits">
-            <div class="circuit">
-                <div class="photo-circuit"></div>
-                <div class="histoire-circuit">
-                    <div class="nom-circuit">Circuit de Spa-Francorchamps</div>
-                    <div class="lieu-circuit">Francorchamps, Belgique</div>
-                    <div class="date-long">
-                        <div class="ouverture"><strong>Ouverture :</strong> 1921</div>
-                        <div class="longueur"><strong>Longueur :</strong> 7,004 km</div>
-                    </div>
-                    <div class="capacite"><strong>Capacité :</strong> 90 000</div>
-                    <div class="meilleur-tour">
-                        <div class="titre-lap">Meilleur tour :</div>
-                        <div class="pilote-lap">Lewis Hamilton (GB) | 2020<br>1'41''252</div>
-                    </div>
-                </div>
-            </div>
-            <div class="circuit">
-                <div class="photo-circuit"></div>
-                <div class="histoire-circuit">
-                    <div class="nom-circuit">Circuit de Nevers Magny-Cours</div>
-                    <div class="lieu-circuit">Magny-Cours, France</div>
-                    <div class="date-long">
-                        <div class="ouverture"><strong>Ouverture :</strong> 1960</div>
-                        <div class="longueur"><strong>Longueur :</strong> 4,411 km</div>
-                    </div>
-                    <div class="capacite"><strong>Capacité :</strong> 139 112</div>
-                    <div class="meilleur-tour">
-                        <div class="titre-lap">Meilleur tour :</div>
-                        <div class="pilote-lap">Fernando Alonso (ESP) | 2004<br>1'13''698</div>
-                    </div>
-                </div>
-            </div>
-            <div class="circuit">
-                <div class="photo-circuit">
-                </div>
-                <div class="histoire-circuit">
-                    <div class="nom-circuit">Circuit de Silverstone</div>
-                    <div class="lieu-circuit">Silverstone, Grande-Bretagne</div>
-                    <div class="date-long">
-                        <div class="ouverture"><strong>Ouverture :</strong> 1947</div>
-                        <div class="longueur"><strong>Longueur :</strong> 5,412 km</div>
-                    </div>
-                    <div class="capacite"><strong>Capacité :</strong> 150 000</div>
-                    <div class="meilleur-tour">
-                        <div class="titre-lap">Meilleur tour :</div>
-                        <div class="pilote-lap">Max Verstappen (P-B) | 2020<br>1'27''264</div>
-                    </div>
-                </div>
-            </div>
-            <div class="circuit">
-                <div class="photo-circuit"></div>
-                <div class="histoire-circuit">
-                    <div class="nom-circuit">Circuit de Monaco</div>
-                    <div class="lieu-circuit">Monte-Carlo, Monaco</div>
-                    <div class="date-long">
-                        <div class="ouverture"><strong>Ouverture :</strong> 1929</div>
-                        <div class="longueur"><strong>Longueur :</strong> 3,337 km</div>
-                    </div>
-                    <div class="capacite"><strong>Capacité :</strong> 37 000</div>
-                    <div class="meilleur-tour">
-                        <div class="titre-lap">Meilleur tour :</div>
-                        <div class="pilote-lap">Lewis Hamilton (GB) | 2019<br>1'10''166</div>
-                    </div>
-                </div>
-            </div>
+
+        <?php
+
+        $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '12345');
+        $mabd->query('SET NAMES utf8;');
+        $req = "SELECT * FROM circuits INNER JOIN pilotes ON circuits.pilote_id = pilotes.pilote_id";
+        $resultat = $mabd->query($req);
+
+        foreach ($resultat as $value){
+            echo '<div class="circuit">';
+                echo '<div class="photo-circuit"style=background:url(images/upload/'.$value['circuit_photo'].');background-size:cover;background-repeat:no-repeat;background-position:50%;></div>';
+                echo '<div class="histoire-circuit">';
+                    echo '<div class="nom-circuit">'.$value['circuit_nom'].'</div>';
+                    echo '<div class="lieu-circuit">'.$value['circuit_ville'].', '.$value['circuit_pays'].'</div>';
+                    echo '<div class="ouverture"><strong>Ouverture : </strong>'.$value['circuit_ouverture'].'</div>';
+                    echo '<div class="longueur"><strong>Longueur : </strong>'.$value['circuit_longueur'].' km</div>';
+                    echo '<div class="capacite"><strong>Capacité : </strong>'.$value['circuit_capacite'].'</div>';
+                    echo '<div class="meilleur-tour">';
+                        echo '<div class="titre-lap">Meilleur tour :</div>';
+                        echo '<div class="pilote-lap">'.$value['pilote_prenom'].' '.$value['pilote_nom'].' ('.$value['pilote_nationalite'].') | '.$value['circuit_anneelap'].'<br>'.$value['circuit_tempslap'].'</div>';
+                    echo '</div>';
+                echo '</div>';
+            echo '</div>';
+        }
+        ?>
         </div>
 
         <form action="/">

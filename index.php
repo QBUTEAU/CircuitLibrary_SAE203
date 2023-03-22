@@ -25,8 +25,7 @@
         </div>
 
         <div id="presentation">
-            <div id="paulricard-index">
-            </div>
+            <div id="paulricard-index"></div>
             <div id="texte-index">
                 <p>Découvrez les circuits qui ont laissé une trace importante
                     dans l'histoire des sports automatiques, ceux sur lesquels les pilotes

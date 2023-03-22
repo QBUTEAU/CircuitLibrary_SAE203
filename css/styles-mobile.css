@@ -12,7 +12,7 @@
         color: #FFFFFF;
         font-weight: 900;
         text-decoration: dashed;
-        font-size: 25px;
+        font-size: 22px;
     }
 
     #accueil{
@@ -66,5 +66,10 @@
     #bouton-recherche button{
         width: 60%;
         padding: 10px;
+    }
+
+
+    #phrase-reussi{
+        padding: 16% 0;
     }
 }

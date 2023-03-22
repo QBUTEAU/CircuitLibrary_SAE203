@@ -14,7 +14,7 @@ header{
     justify-content: space-evenly;
     align-items: center;
     font-family: "Formula1";
-    height: 80px;
+    height: 60px;
     background-color: #000000;
 }
 header > nav > ul > li{
@@ -50,6 +50,9 @@ header > nav > ul > li{
 section{
     width: 100%;
 }
+#section-admin{
+    text-align: center;
+}
 
 /* ----- ACCUEIL ----- */
 
@@ -78,7 +81,7 @@ section{
 /* ----- INDEX ----- */
 
 #presentation{
-    padding: 117px 0;
+    padding: 10% 0;
     width: 70%;
     margin: 0 auto;
     display: flex;
@@ -89,7 +92,7 @@ section{
     width: 30%;
     height: 200px;
     border-radius: 20px;
-    background-image: url(../images/paul-ricard.jpg);
+    background-image: url(../images/upload/paulricard.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -117,9 +120,9 @@ section{
     width: 90%;
 }
 .circuit{
-    margin: 0 auto;
-    height: 400px;
-    width: 300px;
+    margin: 0 25px;
+    height: 470px;
+    width: 290px;
     border-radius: 20px;
     background-color: #000000;
     margin-bottom: 40px;
@@ -128,9 +131,6 @@ section{
 .photo-circuit{
     height: 35%;
     border-radius: 20px 20px 0 0;
-    background-image: url(../images/monaco.jpg);
-    background-position: center;
-    background-size: cover;
 }
 .histoire-circuit{
     display: grid;
@@ -144,17 +144,16 @@ section{
     font-family: "Formula1";
     text-align: center;
 }
-.date-long{
-    display: flex;
-    justify-content: space-evenly;
+.lieu-circuit{
+    text-align: center;
+    font-size: 16px;
 }
-.lieu-circuit,
 .ouverture,
 .longueur,
 .capacite,
 .pilote-lap{
     text-align: center;
-    font-size: 15px;
+    font-size: 14px;
 }
 .titre-lap{
     font-size: 20px;
@@ -198,7 +197,13 @@ section{
     margin-bottom: 60px;
 }
 #bouton-recherche input[type="submit"],
-#bouton-retour input[type="submit"]{
+#bouton-retour input[type="submit"],
+#div-global-admin div button,
+#bouton-retour-accueil button,
+#bouton-retour-gestion button,
+#bouton-envoi-ajout button,
+#submit input[type="submit"],
+#submit-pilotes input[type="submit"]{
     cursor: pointer;
     width: 250px;
     height: 31px;
@@ -209,12 +214,131 @@ section{
     border-radius: 20px;
     border: none;
     transition: 0.3s;
+    text-transform: uppercase;
 }
 #bouton-recherche input[type="submit"]:hover,
-#bouton-retour input[type="submit"]:hover{
+#bouton-retour input[type="submit"]:hover,
+#div-global-admin div button:hover,
+#bouton-retour-accueil button:hover,
+#bouton-retour-gestion button:hover,
+#bouton-envoi-ajout button:hover,
+#submit input[type="submit"]:hover,
+#submit-pilotes input[type="submit"]:hover{
     background-color: #ED1D24;
     color: #FFF;
 }
+
+/* ----- ADMIN ----- */
+
+#div-global-admin{
+    margin: 0 auto;
+    height: 60vh;
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#boutons-retour-ajouter{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+table{
+    margin: 0 auto;
+    border: 2px rgba(0, 0, 0, 0.80) solid;
+    margin-bottom: 30px;
+    width: 60%;
+}
+#tableau-pilotes tr, #tableau-pilotes td{
+    padding: 2px;
+}
+tbody{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.60);
+}
+thead{
+    font-weight: 900;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.80);
+}
+tr,td{
+    padding: 5px;
+}
+table tbody a{
+    text-decoration: dashed;
+    color: #ED1D24;
+}
+table tbody a:hover{
+    font-weight: 900;
+}
+
+/* ----- AJOUTER ----- */
+
+#formulaire, #formulaire-pilotes{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.80);
+    padding: 30px 20px;
+    border-radius: 20px;
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.infos-pilotes{
+    margin: 15px 0;
+}
+
+#ajouter-ville-pays, #ajouter-best-lap, #open-length{
+    display: flex;
+    margin: 15px 0;
+}
+#ajouter-ville-pays div, #ajouter-best-lap div, #open-length div{
+    margin: 0 auto;
+    display: inline-block;
+}
+#open-length div, #ajouter-best-lap div, #ajout-capacite{
+    margin-bottom: 20px;
+}
+
+#ajouter-best-lap, #ajout-pilote, #ajout-photo{
+    margin: 20px 0;
+}
+#ajout-pilote select{
+    font-family: 'Montserrat';
+    border-radius: 20px;
+    font-weight: 800;
+    padding: 5px;
+}
+#id input[type="text"]{
+    width: 20px;
+}
+#id{
+    margin-bottom: 20px;
+}
+#submit{
+    margin-top: 35px;
+}
+#submit-pilotes{
+    margin: 50px 0;
+}
+input[type="text"]{
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: 800;
+    border: none;
+    font-family: 'Montserrat';
+}
+.phrase-resultat{
+    margin: 0 auto;
+    padding: 13% 0;
+    text-align: center;
+}
+
 
 /* ----- FOOTER ----- */
 
