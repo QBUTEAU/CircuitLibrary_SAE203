@@ -22,7 +22,7 @@
                 <strong>MODIFICATION DU CIRCUIT :</strong>
                 <?php
                 $modifPilote = $_GET['num'];
-                $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '12345');
+                $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '%Messi2004');
                 $mabd->query('SET NAMES utf8;');
                 $req = "SELECT * FROM pilotes WHERE pilote_id = $modifPilote";
                 $resultat = $mabd->query($req);

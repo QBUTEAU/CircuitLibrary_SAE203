@@ -51,7 +51,7 @@
 
     $piloteID=$_POST['id'];
 
-    $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '12345');
+    $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '%Messi2004');
     $mabd->query('SET NAMES utf8;');
 
     $req = 'INSERT INTO pilotes(pilote_id,pilote_prenom,pilote_nom,pilote_nationalite) VALUES('.$piloteID.',"'.$prenom.'", "'.$nom.'", "'.$nationalite.'")';

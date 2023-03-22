@@ -1,20 +1,26 @@
-@media screen and (max-width:480px){
-    
+@media screen and (max-width:1000px){
     header{
         display: flex;
         justify-content: center;
     }
     #liens{
         display: block;
-        font-size: 14px;
+        font-size: 12px;
+    }
+    #liens li{
+        padding: 0.5px 0;
+        text-align: right;
     }
     #logo a{
         color: #FFFFFF;
         font-weight: 900;
         text-decoration: dashed;
-        font-size: 22px;
+        font-size: 20px;
     }
+}
 
+@media screen and (max-width:480px){
+    
     #accueil{
         height: 300px;
         background-size: 130%;
@@ -71,5 +77,46 @@
 
     #phrase-reussi{
         padding: 16% 0;
+    }
+
+    #bloc_recherche h2{
+        font-size: 21px;
+    }
+
+    #div-global-admin{
+        margin-top: 100px;
+        display: block;
+        height: 40vh;
+    }
+    #div-global-admin div, #boutons-retour-ajouter div{
+        margin: 20px 0;
+    }
+    #boutons-retour-ajouter{
+        text-align: center;
+        display: block;
+    }
+
+    .none-tableau{
+        display: none;
+    }
+    tr,td{
+        padding: 2px;
+    }
+
+    #formulaire, #formulaire-pilotes{
+        width: 60%;
+    }
+    #formulaire div, #formulaire-pilotes div{
+        display: block;
+        margin-bottom: 20px;
+    }
+    #formulaire div input,.infos-pilotes input{
+        width: 60%;
+    }
+
+
+    #submit input[type="submit"],
+    #submit-pilotes input[type="submit"]{
+        width: 70%;
     }
 }

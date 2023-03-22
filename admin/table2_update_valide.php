@@ -52,7 +52,7 @@
 
     $modifPilote=$_POST['id'];
 
-    $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '12345');
+    $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '%Messi2004');
     $mabd->query('SET NAMES utf8;');
 
     $req = "UPDATE pilotes SET pilote_prenom='$prenom', pilote_nom='$nom',pilote_nationalite='$nationalite' WHERE pilote_id=$modifPilote" ;

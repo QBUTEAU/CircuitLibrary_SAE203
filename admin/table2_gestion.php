@@ -34,23 +34,23 @@
 
     <table id="tableau-pilotes">
 	<thead>
-		<tr><td>Prénom</td>
-        <td>Nom</td>
-        <td>Nationalité</td>
+		<tr><td class="none-tableau" style=text-transform:uppercase>Prénom</td>
+        <td style=text-transform:uppercase>Nom</td>
+        <td class="none-tableau" style=text-transform:uppercase>Nationalité</td>
         <td>SUPPRIMER</td><td>MODIFIER</td></tr>
 	</thead>
 	<tbody>
     <?php
-    $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '12345');
+    $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '%Messi2004');
     $mabd->query('SET NAMES utf8;');
     $req = "SELECT * FROM pilotes";
     $resultat = $mabd->query($req);
 
     foreach ($resultat as $value) {
         echo '<tr>';
-        echo '<td>'.$value['pilote_prenom'] . '</td>';
+        echo '<td class="none-tableau">'.$value['pilote_prenom'] . '</td>';
         echo '<td>'.$value['pilote_nom'].'</td>';
-        echo '<td>'.$value['pilote_nationalite'].'</td>';
+        echo '<td class="none-tableau">'.$value['pilote_nationalite'].'</td>';
         echo '<td> <a href="table2_delete.php?num='.$value['pilote_id'].'">SUPPRIMER</a> </td>';
         echo '<td> <a href="table2_update_form.php?num='.$value['pilote_id'].'">MODIFIER</a> </td>';
         echo '</tr>';

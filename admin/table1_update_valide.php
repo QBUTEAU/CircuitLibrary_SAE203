@@ -93,10 +93,43 @@
     $pilote=$_POST['numpilote'];
     $modifCircuit=$_POST['num'];
 
-    $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '12345');
+    $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '%Messi2004');
     $mabd->query('SET NAMES utf8;');
 
-    $req = "UPDATE circuits SET circuit_nom='$nom', circuit_ville='$ville', circuit_pays='$pays', circuit_ouverture=$ouverture, circuit_longueur=$longueur, circuit_capacite='$capacite', circuit_tempslap='$tempslap', circuit_anneelap=$anneelap, pilote_id=$pilote WHERE circuit_id=$modifCircuit" ;
+    $imageName=$_FILES["photo"]["name"];
+    if($imageName!=""){
+
+			//vérification du format de l'image téléchargée
+			$imageType=$_FILES["photo"]["type"];
+	        if ( ($imageType != "image/png") &&
+	            ($imageType != "image/jpg") &&
+	            ($imageType != "image/jpeg") ) {
+	                echo '<p>Désolé, le type d\'image n\'est pas reconnu !';
+	                echo 'Seuls les formats PNG et JPEG sont autorisés.</p>'."\n";
+	                die();
+	        }
+	
+    		//creation d'un nouveau nom pour cette image téléchargée
+            // pour éviter d'avoir 2 fichiers avec le même nom
+	        $nouvelleImage = date("Y_m_d_H_i_s")."---".$_FILES["photo"]["name"];
+	
+
+    		// dépot du fichier téléchargé dans le dossier /var/www/sae203/images/uploads
+	        if(is_uploaded_file($_FILES["photo"]["tmp_name"])) {
+	            if(!move_uploaded_file($_FILES["photo"]["tmp_name"], 
+	            "../images/upload/".$nouvelleImage)) {
+	                echo '<p>Problème avec la sauvegarde de l\'image, désolé...</p>'."\n";
+	                die();
+	            }
+	        } else {
+	            echo '<p>Problème : image non chargée...</p>'."\n";
+	            die();
+	        }
+
+    $req = "UPDATE circuits SET circuit_nom='$nom', circuit_ville='$ville', circuit_pays='$pays', circuit_ouverture=$ouverture, circuit_longueur=$longueur, circuit_capacite='$capacite', circuit_tempslap='$tempslap', circuit_anneelap=$anneelap, circuit_photo='$nouvelleImage', pilote_id=$pilote WHERE circuit_id=$modifCircuit";}
+    else{
+        $req = "UPDATE circuits SET circuit_nom='$nom', circuit_ville='$ville', circuit_pays='$pays', circuit_ouverture=$ouverture, circuit_longueur=$longueur, circuit_capacite='$capacite', circuit_tempslap='$tempslap', circuit_anneelap=$anneelap, pilote_id=$pilote WHERE circuit_id=$modifCircuit";
+         }
 
     echo '<div class="phrase-resultat"><p>Votre modification concernant le circuit n°'.$modifCircuit.' a été fait avec succès !</p>';
     echo '<div id="bouton-retour-accueil"><form action="table1_gestion.php"><button style=text-transform:uppercase>Revenir au tableau</button></form></div></div>';

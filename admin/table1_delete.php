@@ -26,7 +26,7 @@
         // recupérer dans l'url l'id de l'album à supprimer
         $suppCircuit=$_GET['num'];
 
-        $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '12345');
+        $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '%Messi2004');
         $mabd->query('SET NAMES utf8;');
 
         // tapez ici la requete de suppression de l'album dont l'id est passé dans l'url

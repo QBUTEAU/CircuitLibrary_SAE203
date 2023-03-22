@@ -139,6 +139,9 @@ section{
     background-color: rgba(219, 0, 0, 0.218);
     border-radius: 0 0 20px 20px;
 }
+.histoire-circuit:hover{
+    background-color: rgba(166, 0, 0, 0.218) ;
+}
 .nom-circuit{
     font-size: 25px;
     font-family: "Formula1";
@@ -240,7 +243,6 @@ section{
 }
 
 #boutons-retour-ajouter{
-    width: 50%;
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -338,7 +340,6 @@ input[type="text"]{
     padding: 13% 0;
     text-align: center;
 }
-
 
 /* ----- FOOTER ----- */
 

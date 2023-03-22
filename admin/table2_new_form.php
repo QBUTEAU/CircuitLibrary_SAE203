@@ -34,7 +34,7 @@
 
     <div id="formulaire-pilotes">
         <form method="POST" action="table2_new_valide.php" enctype="multipart/form-data">
-            <div class="infos-pilotes">ID : <input type="text" name="id" value="122"></div>
+            <div class="infos-pilotes">ID : <input type="text" name="id" value="124"></div>
             <div class="infos-pilotes">Prénom : <input type="text" name="prenom" placeholder="Jacky"></div>
             <div class="infos-pilotes">Nom : <input type="text" name="nom" placeholder="Ickx"></div>
             <div class="infos-pilotes">Nationalité : <input type="text" name="nationalite" placeholder="BE"></div>

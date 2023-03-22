@@ -34,18 +34,18 @@
 
     <table>
 	<thead>
-		<tr><td>Nom du circuit</td>
-        <td class="none-tableau">Lieu du circuit</td>
-        <td class="none-tableau">Ouverture</td>
-        <td class="none-tableau">Longueur</td>
-        <td class="none-tableau">Capacité</td>
-        <td class="none-tableau">Année du meilleur tour</td>
-        <td class="none-tableau">Temps du meilleur tour</td>
+		<tr><td style=text-transform:uppercase>Nom du circuit</td>
+        <td class="none-tableau" style=text-transform:uppercase>Lieu du circuit</td>
+        <td class="none-tableau" style=text-transform:uppercase>Ouverture</td>
+        <td class="none-tableau" style=text-transform:uppercase>Longueur</td>
+        <td class="none-tableau" style=text-transform:uppercase>Capacité</td>
+        <td class="none-tableau" style=text-transform:uppercase>Année du meilleur tour</td>
+        <td class="none-tableau" style=text-transform:uppercase>Temps du meilleur tour</td>
         <td>SUPPRIMER</td><td>MODIFIER</td></tr>
 	</thead>
 	<tbody>
     <?php
-    $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '12345');
+    $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '%Messi2004');
     $mabd->query('SET NAMES utf8;');
     $req = "SELECT * FROM circuits";
     $resultat = $mabd->query($req);
@@ -53,12 +53,12 @@
     foreach ($resultat as $value) {
         echo '<tr>';
         echo '<td>'.$value['circuit_nom'] . '</td>';
-        echo '<td>'.$value['circuit_ville'].', '.$value['circuit_pays'].'</td>';
-        echo '<td>'.$value['circuit_ouverture'].'</td>';
-        echo '<td>'.$value['circuit_longueur'].' km</td>';
-        echo '<td>'.$value['circuit_capacite'].'</td>';
-        echo '<td>'.$value['circuit_anneelap'].'</td>';
-        echo '<td>'.$value['circuit_tempslap'].'</td>';
+        echo '<td class="none-tableau">'.$value['circuit_ville'].', '.$value['circuit_pays'].'</td>';
+        echo '<td class="none-tableau">'.$value['circuit_ouverture'].'</td>';
+        echo '<td class="none-tableau">'.$value['circuit_longueur'].' km</td>';
+        echo '<td class="none-tableau">'.$value['circuit_capacite'].'</td>';
+        echo '<td class="none-tableau">'.$value['circuit_anneelap'].'</td>';
+        echo '<td class="none-tableau">'.$value['circuit_tempslap'].'</td>';
         echo '<td> <a href="table1_delete.php?num='.$value['circuit_id'].'">SUPPRIMER</a> </td>';
         echo '<td> <a href="table1_update_form.php?num='.$value['circuit_id'].'">MODIFIER</a> </td>';
         echo '</tr>';

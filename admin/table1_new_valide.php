@@ -92,7 +92,7 @@
     $pilote=$_POST['numpilote'];
     
 
-    $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '12345');
+    $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '%Messi2004');
     $mabd->query('SET NAMES utf8;');
 
 	//vérification du format de l'image téléchargée

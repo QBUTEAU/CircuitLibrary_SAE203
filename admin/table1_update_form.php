@@ -22,7 +22,7 @@
                 <strong>MODIFICATION DU CIRCUIT :</strong>
                 <?php
                 $modifCircuit = $_GET['num'];
-                $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '12345');
+                $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '%Messi2004');
                 $mabd->query('SET NAMES utf8;');
                 $req = "SELECT * FROM circuits WHERE circuit_id = $modifCircuit";
                 $resultat = $mabd->query($req);
@@ -59,10 +59,11 @@
                 <div>Temps : <input type="text" name="tempslap" value="<?php echo $circuit['circuit_tempslap'];?>"></div>
                 <div>Année : <input type="text" name="anneelap" value="<?php echo $circuit['circuit_anneelap'];?>"></div>
             </div>
+            <div id="ajout-photo">Photo : <input type="file" name="photo"/></div>
             <div id="ajout-pilote">Pilote :
             <select name="numpilote">
                 <?php
-                $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '12345');
+                $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '%Messi2004');
                 $mabd->query('SET NAMES utf8;');
                 $req = "SELECT * FROM circuits INNER JOIN pilotes ON circuits.pilote_id = pilotes.pilote_id";
                 $resultat = $mabd->query($req);
