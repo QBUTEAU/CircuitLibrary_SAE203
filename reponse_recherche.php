@@ -60,9 +60,10 @@
             echo '</div>';
         }
 
-        if(!empty($resultat)){
+        if ($resultat -> rowCount() == 0) {
             echo "<div class=phrase-resultat><p>Désolé, il n'y a aucun résultat concernant votre recherche.</p>";
             echo '<div id="bouton-retour-accueil"><form action="form_recherche.php"><button style=text-transform:uppercase>Refaire une recherche</button></form></div></div>';
+
         }
         ?>
         </div>
