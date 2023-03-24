@@ -29,7 +29,7 @@ header > nav > ul > li{
 #logo a{
     color: #FFFFFF;
     font-weight: 900;
-    text-decoration: dashed;
+    text-decoration: none;
     font-size: 30px;
 }
 #liens{
@@ -104,7 +104,6 @@ section{
     font-weight: 700;
     line-height: 150%;
     padding-left: 40px;
-    line-height: 170%;
     text-align: justify;
 }
 
@@ -351,7 +350,7 @@ footer{
     width: 100%;
     background-color: #000000;
     color: #FFF;
-    padding: 10px 0 10px 0;
+    padding: 10px 0;
     box-shadow: 0 0 10px rgb(0 0 0);
 }
 #site-perso{

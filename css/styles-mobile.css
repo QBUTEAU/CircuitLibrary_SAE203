@@ -1,6 +1,5 @@
 @media screen and (max-width:1000px){
     header{
-        display: flex;
         justify-content: center;
     }
     #liens{
@@ -12,9 +11,6 @@
         text-align: right;
     }
     #logo a{
-        color: #FFFFFF;
-        font-weight: 900;
-        text-decoration: dashed;
         font-size: 20px;
     }
 }
@@ -59,10 +55,7 @@
 
 
 
-    #bloc_recherche h2{
-        margin-bottom: 50px;
-    }
-    #label-input-recherche{
+    #bloc_recherche h2, #label-input-recherche{
         margin-bottom: 50px;
     }
     #label-input-recherche div{
@@ -74,14 +67,8 @@
         padding: 10px;
     }
 
-
     .phrase-resultat{
         padding: 25% 0;
-    }
-
-
-    #phrase-reussi{
-        padding: 16% 0;
     }
 
     #bloc_recherche h2{
