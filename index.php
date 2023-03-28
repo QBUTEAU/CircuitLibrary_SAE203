@@ -28,7 +28,7 @@
             <div id="paulricard-index"></div>
             <div id="texte-index">
                 <p>Découvrez les circuits qui ont laissé une trace importante
-                    dans l'histoire des sports automatiques, ceux sur lesquels les pilotes
+                    dans l'histoire des sports automobiles, ceux sur lesquels les pilotes
                     ont remporté leur première course, ont remporté un championnat
                     du monde ou ont tout simplement participé à leur première course.
                     Vous y découvrirez l'historique de chaque circuit, ainsi que
