@@ -41,7 +41,7 @@
 	</thead>
 	<tbody>
     <?php
-    $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '%Messi2004');
+    $mabd = new PDO('mysql:host=localhost;dbname='';charset=UTF8;', '', '');
     $mabd->query('SET NAMES utf8;');
     $req = "SELECT * FROM pilotes";
     $resultat = $mabd->query($req);
