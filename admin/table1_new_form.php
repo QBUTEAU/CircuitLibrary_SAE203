@@ -53,7 +53,7 @@
             <div id="ajout-pilote">Pilote :
             <select name="numpilote">
                 <?php
-                $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '%Messi2004');
+                $mabd = new PDO('mysql:host=localhost;dbname='';charset=UTF8;', '', '');
                 $mabd->query('SET NAMES utf8;');
                 $req = "SELECT * FROM circuits INNER JOIN pilotes ON circuits.pilote_id = pilotes.pilote_id";
                 $resultat = $mabd->query($req);
