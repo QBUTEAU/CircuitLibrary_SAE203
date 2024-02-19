@@ -28,7 +28,7 @@
 
         <?php
 
-        $mabd = new PDO('mysql:host=localhost;dbname=bdd;charset=UTF8;', '', '');
+        $mabd = new PDO('mysql:host=localhost;dbname='';charset=UTF8;', '', '');
         $mabd->query('SET NAMES utf8;');
         $req = "SELECT * FROM circuits INNER JOIN pilotes ON circuits.pilote_id = pilotes.pilote_id";
         $resultat = $mabd->query($req);
