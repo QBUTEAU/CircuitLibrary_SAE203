@@ -93,7 +93,7 @@
     $pilote=$_POST['numpilote'];
     $modifCircuit=$_POST['num'];
 
-    $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '%Messi2004');
+    $mabd = new PDO('mysql:host=localhost;dbname='';charset=UTF8;', '', '');
     $mabd->query('SET NAMES utf8;');
 
     $imageName=$_FILES["photo"]["name"];
