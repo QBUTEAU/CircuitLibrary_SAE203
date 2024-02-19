@@ -1,6 +1,6 @@
 -- MySQL dump 10.19  Distrib 10.3.36-MariaDB, for debian-linux-gnu (x86_64)
 --
--- Host: localhost    Database: sae203Base
+-- Host: ''    Database: ''
 -- ------------------------------------------------------
 -- Server version	10.3.36-MariaDB-0+deb10u2
 
