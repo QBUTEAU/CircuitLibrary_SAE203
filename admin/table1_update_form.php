@@ -22,7 +22,7 @@
                 <strong>MODIFICATION DU CIRCUIT :</strong>
                 <?php
                 $modifCircuit = $_GET['num'];
-                $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', '%Messi2004');
+                $mabd = new PDO('mysql:host=localhost;dbname='';charset=UTF8;', '', '');
                 $mabd->query('SET NAMES utf8;');
                 $req = "SELECT * FROM circuits WHERE circuit_id = $modifCircuit";
                 $resultat = $mabd->query($req);
